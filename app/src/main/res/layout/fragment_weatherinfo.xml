@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".weatherinfo">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Montreal today weather is :"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgwe"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@+id/wename"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:id="@+id/imgwe"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+         />
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@+id/lacttemp"
+        app:layout_constraintEnd_toEndOf="@+id/imgwe"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/imgwe"
+        app:layout_constraintTop_toBottomOf="@+id/imgwe"
+        android:id="@+id/wename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Montreal"
+        android:textSize="20sp"
+         />
+
+
+    <TextView
+        android:id="@+id/lmintemp"
+        android:layout_width="wrap_content"
+        android:text="Min-Temp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="268dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="Temp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lacttemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lacttemp"
+        app:layout_constraintTop_toTopOf="@+id/lacttemp"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/lmaxtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@+id/lmintemp"
+        app:layout_constraintEnd_toStartOf="@+id/lmaxtemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lmintemp"
+        app:layout_constraintTop_toTopOf="@+id/lmintemp"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/lacttemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Max-Temp"
+        android:textSize="20sp"
+         />
+
+    <TextView
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tmintemp"
+        app:layout_constraintTop_toBottomOf="@+id/lacttemp"
+        android:id="@+id/tactemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lmintemp"
+        android:id="@+id/tmintemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+         />
+
+    <TextView
+        android:id="@+id/tmaxtemp"
+        android:layout_width="15dp"
+        app:layout_constraintStart_toEndOf="@+id/tactemp"
+        app:layout_constraintTop_toBottomOf="@+id/lmaxtemp"
+        android:layout_height="25dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="13dp"
+        android:text="0"
+        android:textSize="23sp"/>
+    <TextView
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tmintemp"
+        android:id="@+id/pric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="33dp"
+        android:text="Predictability -:"
+         />
+
+    <TextView
+        android:text="Humidity -:"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pric"
+        app:layout_constraintVertical_bias="0.0"
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="325dp"
+         />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity"
+        android:id="@+id/recycle"
+        android:layout_width="149dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+
+        tools:itemCount="6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
